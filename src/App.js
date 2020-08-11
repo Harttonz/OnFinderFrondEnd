@@ -1,41 +1,24 @@
-import React, { Component } from "react";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Beranda from './components/beranda';
-import Profile from './components/profile';
-import Dashboard from './components/Dashboard';
-import EditProfile from './components/editProfile'; 
+import React,{Component} from "react";
+import {BrowserRouter,Route,Switch} from "react-router-dom";
+import Beranda from "./components/beranda";
+import ModalLogin from "./components/modalLogin";
+import Profile from "./components/profile";
+import Dashboard from "./components/Dashboard";
 import Addpet from "./components/Addpet";
-import Payment from './components/payment';
+import EditProfile from "./components/editProfile";
+import Payment from "./components/payment";
 
-
-class App extends Component {
-  render() {
-    return (
-      // <Router>
-      //   <Switch>
-      //     <Route path="/beranda">
-      //       <Beranda />
-      //     </Route>
-      //     <Route path="/profile">
-      //       <Profile />
-      //     </Route>
-      //     <Route path="/dashboard">
-      //       <Dashboard />
-      //     </Route>
-      //     <Route path="/editprofile">
-      //       <Editprofile />
-      //     </Route>
-      //     <Route path="/addpet">
-      //       <Addpet />
-      //     </Route>
-    //  <Route path="/payment">
-    //         <Payment />
-    //       </Route> 
-      //   </Switch>
-      // </Router>
-    <Addpet/>
-    );
-  }
-}
-
+const App =()=>(
+    <BrowserRouter>
+    <Switch>
+        <Route path="/" exact component = {Beranda}/>
+        <Route path="/login" component={ModalLogin}/>
+        <Route path="/dashboard" component={Dashboard}/>   
+        <Route path="/addpet" component={Addpet}/>
+        <Route path="/profile" component={Profile}/>
+        <Route path="/editprofil"component={EditProfile}/>
+        <Route path="/payment" component={Payment}/>
+    </Switch>
+     </BrowserRouter>
+); 
 export default App;

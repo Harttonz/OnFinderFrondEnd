@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./editprofile.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 export default class EditProfile extends Component {
   render() {
